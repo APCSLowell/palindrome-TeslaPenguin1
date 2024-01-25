@@ -35,7 +35,7 @@ public void tester()
     }
   }
 }
-public String cleanString(string str) {
+public String cleanString(String str) {
   String cleaned = new String();
   for(int i = 0; i < str.length(); i++) if(Character.isLetter(str.charAt(i)) && !str.substring(i,i+1).equals(" ")) cleaned += str.substring(i,i+1);
   return cleaned;
