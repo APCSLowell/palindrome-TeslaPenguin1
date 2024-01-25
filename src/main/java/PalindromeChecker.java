@@ -38,14 +38,14 @@ public void tester()
 public String cleanString(String str) {
   String cleaned = new String();
   for(int i = 0; i < str.length(); i++) if(Character.isLetter(str.charAt(i)) && !str.substring(i,i+1).equals(" ")) cleaned += str.substring(i,i+1);
-  return cleaned;
+  return cleaned.toLowerCase();
 }
 public boolean palindrome(String word)
 {
   String fwd = new String(cleanString(word));
   String bwd = new String(reverse(fwd));
   int len = fwd.length();
-  for(int i = 0; i < len; i++) if(fwd.substring(i,i+1) != bwd.substring(len-i-1, len-i-2)) return false;
+  for(int i = 0; i < len/2; i++) if(fwd.substring(i,i+1) != bwd.substring(len-i-1, len-i-2)) return false;
   
   return true;
 }
