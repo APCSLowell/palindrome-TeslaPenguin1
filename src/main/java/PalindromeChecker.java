@@ -37,7 +37,7 @@ public void tester()
 }
 public String cleanString(string str) {
   String cleaned = new String();
-  for(int i = 0; i < str.length(); i++) if(Character.isLetter(sString.charAt(i)) && !sWord.substring(i,i+1).equals(" ")) str += cleaned.substring(i,i+1);
+  for(int i = 0; i < str.length(); i++) if(Character.isLetter(str.charAt(i)) && !str.substring(i,i+1).equals(" ")) cleaned += str.substring(i,i+1);
   return cleaned;
 }
 public boolean palindrome(String word)
